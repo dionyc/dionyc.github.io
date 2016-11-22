@@ -2,7 +2,7 @@
 This project uses some of ESPN's large pencil expand panel dimensions and specs.
 
 <div>
-  <sub>Made with ❤︎ by <a href="https://twitter.com/dionycdot">Diony C.</a></sub>
+  <sub>Made with ❤︎ by <a href="https://twitter.com/dionycdot" target="_blank">Diony C.</a></sub>
 </div>
 
 ## Features
