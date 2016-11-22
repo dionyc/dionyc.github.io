@@ -1,5 +1,5 @@
 # [ESPN HTML5 Scoreboard Component using JSON](https://dionyc.github.io/espn-html5-scoreboard)
-This proof of concept page uses some of ESPN large pencil expand panel dimensions and specs.
+This project uses some of ESPN's large pencil expand panel dimensions and specs.
 
 <div>
   <sub>Made with ❤︎ by <a href="https://twitter.com/dionydcot">Diony C.</a></sub>
