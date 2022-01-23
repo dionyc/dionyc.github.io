@@ -5,13 +5,33 @@
   used:
     - thing: Squarespace
 
-- name: ESPN HTML5 Scoreboard Component using JSON
+- name: ESPN HTML5 Scoreboard Component
   url: https://dionyc.github.io/espn-html5-scoreboard/
   code: https://github.com/dionyc/espn-html5-scoreboard
-  description: This project uses some of ESPN's large pencil expand panel dimensions and specs.
+  description: This a small project uses some of ESPN's large pencil expand panel dimensions and specs.
   used:
     - thing: JavaScript
     - thing: HTML
     - thing: CSS
     - thing: JSON
     - thing: VS CODE
+
+- name: mixtapekings.com
+  url: https://mixtapekings.com/
+  code: https://mixtapekings.com/
+  description: This is one of my oldest and favorite project I helped launched in 2003 with my brother and sisters. Technology and music runs in my families veins, so we were able to organically create a online business that did not exist at that time. Our mission was to helped upcoming artist and DJ's promote thier work online. In addition we helped them merchandise products to their fans world wide. We also had the opportunity to run for 2 years, our own radio show on Sirius Satellite Radio (Now SiriusXM) called the Mixtapekings Countdown. Today the site is just a skeleton of its prime days, as we keep up old content online that people still like to access.
+  used:
+    - thing: Wordpress
+    - thing: Volusion/Shopify    
+    - thing: Google Tag Manager
+    - thing: Google Ad Manager
+    - thing: Google Analytics
+    - thing: Google Adwords
+    - thing: Constant Contact
+    - thing: MailChimp
+    - thing: Desk CRM
+    - thing: Adobe Photoshop
+    - thing: Adobe Illustrator
+    - thing: JavaScript
+    - thing: HTML
+    - thing: CSS
