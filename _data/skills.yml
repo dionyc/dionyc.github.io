@@ -1,0 +1,28 @@
+languages:
+  - item: JavaScript
+  - item: HTML
+  - item: CSS/Sass
+
+frameworks:
+  - item: Salesforce Lightning (LWC)
+  - item: React
+  - item: Node
+  - item: Wordpress
+
+tools:
+  - item: Visual Studio Code
+  - item: Github
+  - item: Azure DevOps
+  - item: JIRA
+  - item: Gulp & Grunt
+  - item: Chrome DevTools
+  - item: SourceTree
+  - item: Google Tag Manager
+
+design:
+  - item: Adobe Photoshop
+  - item: InVision
+  - item: Figma
+  - item: Sketch
+
+

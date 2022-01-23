@@ -1,0 +1,39 @@
+# Site settings
+name: Diony Concepcion
+title: Diony Concepcion | Front End Developer
+description: I'm Diony Concepcion, a Dad, front-end developer and ambitious entrepreneur who loves building cool interfaces & experiences. Ready to embrace Web 3.0 & NFT's.
+url: https://dionyc.github.io/
+baseurl: ''
+email: ''
+cover: https://dionyc.github.io/img/og.png
+logo: https://dionyc.github.io/img/emojis/man-technologist-medium-skin-tone_1f468-1f3fd-200d-1f4bb.png
+resume: https://dionyc.github.io/diony_c_resume.pdf
+social:
+  - title: twitter
+    url: https://twitter.com/dionycdot
+  - title: github
+    url: https://github.com/dionyc
+  - title: linkedin
+    url: https://www.linkedin.com/in/diony/
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - '*.gemspec'
+  - 'README.md'
+  - 'node_modules'
+  - 'build'
+  - 'gulpfile.js'
+  - 'package.json'
+
+keep_files:
+  - 'CNAME'
+  - '.git'
+  - '.gitignore'
+
+plugins_dir:
+  - jekyll-minifier
+  - jekyll-sitemap

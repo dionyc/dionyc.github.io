@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="footer__copyright">
+    <div class="top">
+    </div>
+    <div class="bottom">
+      <span>Diony Concepcion</span>
+      <img class="emoji" src="{{site.baseurl}}/img/emojis/victory-hand_medium-light-skin-tone_270c-1f3fc_1f3fc.png" alt="emoji">
+      <span>2022</span>
+    </div>
+        <div class="bottom">
+      <span>Inspired by 
+        <a href="https://github.com/bchiang7" target="_blank" class="underline-link">Brittany Chiang</a></span>
+    </div>
+  </div>
+  <div class="footer__links">
+    {% for link in site.social %}
+    <a href="{{link.url}}" target="_blank" title="{{link.title}}">
+      <span class="text">{{link.title}}</span>
+      <img src="{{site.baseurl}}/img/social/{{link.title}}.svg" alt="{{link.title}}">
+    </a>
+    {% endfor %}
+  </div>
+</footer>
