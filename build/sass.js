@@ -1,6 +1,10 @@
-const sass = require('gulp-sass');
-const prefix = require('gulp-autoprefixer');
+const gulpSass = require('gulp-sass');
+const sass = require('sass');
+const autoprefixer = require('gulp-autoprefixer').default;
 const cleanCSS = require('gulp-clean-css');
+
+// Configure gulp-sass to use Dart Sass
+const sassCompiler = gulpSass(sass);
 
 const scssPath = '_scss/*.scss';
 const destPath = '_site/css';
@@ -10,13 +14,13 @@ module.exports = gulp => {
     return gulp
       .src(scssPath)
       .pipe(
-        sass({
+        sassCompiler({
           includePaths: ['scss'],
           outputStyle: 'expanded',
-        })
+        }).on('error', sassCompiler.logError)
       )
       .pipe(
-        prefix({
+        autoprefixer({
           overrideBrowserslist: ['last 2 versions'],
           cascade: false,
         })
