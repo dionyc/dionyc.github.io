@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  jekyll:
+    image: jekyll/jekyll:4.2.2
+    container_name: dionyc-jekyll
+    command: jekyll serve --host 0.0.0.0 --livereload
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/jekyll
+    environment:
+      - JEKYLL_ENV=development
+    stdin_open: true
+    tty: true
+
+  # Alternative: Node.js development server
+  node:
+    image: node:18-alpine
+    container_name: dionyc-node
+    working_dir: /app
+    command: sh -c "npm install && npm start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - node

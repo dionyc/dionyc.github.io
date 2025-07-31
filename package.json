@@ -10,20 +10,26 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp serve --watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "build:static": "node generate-static.js && npm run build:assets",
+    "build:assets": "gulp sass && gulp scripts && gulp images",
+    "serve:static": "npm run build:static && npx http-server _site -p 3000 -o",
+    "docker:jekyll": "docker-compose up jekyll",
+    "docker:node": "docker-compose --profile node up node"
   },
   "author": "Diony C.",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "browser-sync": "^3.0.3",
     "eslint": "^8.57.1",
+    "browser-sync": "^3.0.3",
     "gulp": "^5.0.1",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-eslint": "^6.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.80.7"
+    "sass": "^1.80.7",
+    "js-yaml": "^4.1.0",
+    "http-server": "^14.1.1"
   }
 }
