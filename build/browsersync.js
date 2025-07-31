@@ -19,17 +19,17 @@ module.exports = gulp => {
     done();
   };
   
-  // Simple build task that copies HTML files (fallback when Jekyll is not available)
+  // Simple build task that copies HTML files except index.html (we have a static version)
   gulp.task('jekyll-build', () => {
     return gulp
-      .src(['*.html', '*.xml', '*.txt'])
+      .src(['*.html', '*.xml', '*.txt', '!index.html'])
       .pipe(gulp.dest('_site'));
   });
 
-  // Simplified dev build task
+  // Simplified dev build task that doesn't overwrite our static index.html
   gulp.task('jekyll-dev', () => {
     return gulp
-      .src(['*.html', '*.xml', '*.txt'])
+      .src(['*.html', '*.xml', '*.txt', '!index.html'])
       .pipe(gulp.dest('_site'));
   });
 
