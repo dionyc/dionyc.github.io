@@ -19,21 +19,21 @@ module.exports = gulp => {
     done();
   };
   
-  // Simple build task that copies HTML files except index.html (we have a static version)
-  gulp.task('jekyll-build', () => {
-    return gulp
-      .src(['*.html', '*.xml', '*.txt', '!index.html'])
-      .pipe(gulp.dest('_site'));
+  // run `jekyll build`
+  gulp.task('jekyll-build', done => {
+    return cp.spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' }).on('close', done);
   });
 
-  // Simplified dev build task that doesn't overwrite our static index.html
-  gulp.task('jekyll-dev', () => {
-    return gulp
-      .src(['*.html', '*.xml', '*.txt', '!index.html'])
-      .pipe(gulp.dest('_site'));
+  // run `jekyll build` with _config_dev.yml
+  gulp.task('jekyll-dev', done => {
+    return cp
+      .spawn('bundle', ['exec', 'jekyll', 'build', '--config', '_config.yml,_config_dev.yml'], {
+        stdio: 'inherit',
+      })
+      .on('close', done);
   });
 
-  // Rebuild then reload the page
+  // Rebuild Jekyll then reload the page
   gulp.task('jekyll-rebuild', gulp.series(['jekyll-dev', reloadBrowser]));
 
   gulp.task(
