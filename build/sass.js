@@ -1,11 +1,13 @@
-const sass = require('gulp-sass')(require('sass'));
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
+import gulpSass from 'gulp-sass';
+import * as sassCompiler from 'sass';
+import autoprefixer from 'gulp-autoprefixer';
+import cleanCSS from 'gulp-clean-css';
 
+const sass = gulpSass(sassCompiler);
 const scssPath = '_scss/*.scss';
 const destPath = '_site/css';
 
-module.exports = gulp => {
+export default gulp => {
   gulp.task('sass', () => {
     return gulp
       .src(scssPath)

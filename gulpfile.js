@@ -1,8 +1,8 @@
-const gulp = require('gulp');
-const sass = require('./build/sass');
-const scripts = require('./build/scripts');
-const images = require('./build/images');
-const sync = require('./build/browsersync');
+import gulp from 'gulp';
+import sass from './build/sass.js';
+import scripts from './build/scripts.js';
+import images from './build/images.js';
+import sync from './build/browsersync.js';
 
 [sass, scripts, images, sync].forEach(task => {
   task(gulp);

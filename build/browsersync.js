@@ -1,6 +1,7 @@
-const browserSync = require('browser-sync').create();
-const cp = require('child_process');
+import browserSync from 'browser-sync';
+import cp from 'child_process';
 
+const bs = browserSync.create();
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
 const scssPath = '_scss/**/*.scss';
@@ -13,9 +14,9 @@ const templatePath = [
   '_posts/*',
 ];
 
-module.exports = gulp => {
+export default gulp => {
   const reloadBrowser = done => {
-    browserSync.reload();
+    bs.reload();
     done();
   };
   // run `jekyll build`
@@ -38,7 +39,7 @@ module.exports = gulp => {
   gulp.task(
     'serve',
     gulp.series('jekyll-dev', () => {
-      browserSync.init({
+      bs.init({
         server: {
           baseDir: '_site',
         },
