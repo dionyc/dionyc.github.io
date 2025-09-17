@@ -1,5 +1,5 @@
-const eslint = require('gulp-eslint');
-const uglify = require('gulp-uglify');
+const eslint = require('gulp-eslint-new');
+const terser = require('gulp-terser');
 
 const jsPath = '_scripts/*.js';
 const destPath = '_site/js';
@@ -15,7 +15,7 @@ module.exports = gulp => {
           })
         )
         .pipe(eslint.format())
-        // .pipe(uglify())
+        // .pipe(terser())
         .pipe(gulp.dest(destPath))
         .pipe(gulp.dest('js'))
     );

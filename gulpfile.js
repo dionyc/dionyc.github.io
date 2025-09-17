@@ -8,4 +8,5 @@ const sync = require('./build/browsersync');
   task(gulp);
 });
 
-gulp.task('build', gulp.series(['sass', 'scripts', 'images', 'jekyll-build']));
+gulp.task('build', gulp.series(['sass', 'scripts', 'images']));
+gulp.task('build-with-jekyll', gulp.series(['sass', 'scripts', 'images', 'jekyll-build']));

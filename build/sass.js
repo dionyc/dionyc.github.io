@@ -1,5 +1,5 @@
-const sass = require('gulp-sass');
-const prefix = require('gulp-autoprefixer');
+const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 
 const scssPath = '_scss/*.scss';
@@ -16,8 +16,8 @@ module.exports = gulp => {
         })
       )
       .pipe(
-        prefix({
-          overrideBrowserslist: ['last 2 versions'],
+        autoprefixer({
+          overrideBrowserslist: ['last 3 versions', '> 1%'],
           cascade: false,
         })
       )
