@@ -15,7 +15,7 @@ export default gulp => {
         sass({
           includePaths: ['scss'],
           outputStyle: 'expanded',
-        })
+        }).on('error', sass.logError)
       )
       .pipe(
         autoprefixer({
