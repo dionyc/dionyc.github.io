@@ -1,16 +1,26 @@
 ---
-
+import Default from "../layouts/Default.astro";
+import Switch from "../components/Switch.astro";
+import Intro from "../components/Intro.astro";
+import Background from "../components/Background.astro";
+import Skills from "../components/Skills.astro";
+import Experience from "../components/Experience.astro";
+import FeaturedProjects from "../components/FeaturedProjects.astro";
+import OtherProjects from "../components/OtherProjects.astro";
+import Footer from "../components/Footer.astro";
+import TopButton from "../components/TopButton.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Default>
+  <div id="site">
+    <Switch />
+    <Intro />
+    <Background />
+    <Skills />
+    <Experience />
+    <FeaturedProjects />
+    <OtherProjects />
+    <Footer />
+    <TopButton />
+  </div>
+</Default>

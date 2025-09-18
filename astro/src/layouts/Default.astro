@@ -1,0 +1,40 @@
+---
+import site from "../data/site.json";
+const { title = site.title, description = site.description, ogImage = site.cover } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{title}</title>
+    <link rel="icon" type="image/png" href={site.logo} hreflang="en-us" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={site.url} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="design, development, web, diony, concepcion, javascript" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content={site.url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image:src" content={ogImage} />
+    <link rel="stylesheet" href="/css/main.css" hreflang="en-us" />
+  </head>
+  <body>
+    <slot />
+    <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/js/main.js" type="module"></script>
+  </body>
+  
+</html>
+

@@ -1,0 +1,27 @@
+---
+import site from "../data/site.json";
+---
+<footer class="footer">
+  <div class="footer__copyright">
+    <div class="top">
+    </div>
+    <div class="bottom">
+      <span>Diony Concepcion</span>
+      <img class="emoji" src="/img/emojis/victory-hand_medium-light-skin-tone_270c-1f3fc_1f3fc.png" alt="emoji" />
+      <span>2024</span>
+    </div>
+    <div class="bottom">
+      <span>Inspired by 
+        <a href="https://github.com/bchiang7" target="_blank" class="underline-link">Brittany Chiang</a></span>
+    </div>
+  </div>
+  <div class="footer__links">
+    {site.social.map((link) => (
+      <a href={link.url} target="_blank" title={link.title}>
+        <span class="text">{link.title}</span>
+        <img src={`/img/social/${link.title}.svg`} alt={link.title} />
+      </a>
+    ))}
+  </div>
+</footer>
+
