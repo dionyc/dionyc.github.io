@@ -1,0 +1,43 @@
+---
+import skills from "../data/skills.json";
+---
+<section class="section skills">
+  <div class="section__title">Skills</div>
+  <div class="section__content">
+    <div class="skillz">
+      <div class="skillz__category">
+        <div class="skillz__category__label">Languages</div>
+        <ul>
+          {skills.languages.map((language) => (
+            <li class="skillz__category__item">{language.item}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Frameworks</div>
+        <ul>
+          {skills.frameworks.map((framework) => (
+            <li class="skillz__category__item">{framework.item}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Tools</div>
+        <ul>
+          {skills.tools.map((tool) => (
+            <li class="skillz__category__item">{tool.item}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Design</div>
+        <ul>
+          {skills.design.map((thing) => (
+            <li class="skillz__category__item">{thing.item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+

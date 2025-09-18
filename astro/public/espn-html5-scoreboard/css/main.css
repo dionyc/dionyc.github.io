@@ -1,0 +1,189 @@
+*, *::after, *::before {box-sizing: border-box;margin: 0;padding: 0;border: 0;}
+a {cursor: pointer;}
+body {
+    font-family: "BentonSans",-apple-system,"Roboto",Helvetica,Arial,sans-serif;
+    background: #edeef0;
+    color: #333;
+}
+
+
+/* layout */
+.wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    box-sizing: content-box;
+}
+.sidebar {
+    width: 300px;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+#pencil_brand {
+    max-width: 1280px;
+    margin: 30px auto 0;
+    padding: 0 10px;
+    box-sizing: content-box;
+    position: relative;
+}
+
+
+/*** scoreboard  ***/
+#scoreboard {
+    flex: 1;
+}
+
+img {width: 100%;}
+
+ul {
+    list-style: none outside;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    width: 50%;
+    padding: 0 20px 20px 0;
+}
+
+li > div {
+    padding: 0 15px 15px;
+    background: #fff;
+    border: 1px solid #cbccce;
+}
+
+h2 {
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #cbccce;
+    margin: 0px -15px 13px;
+    padding: 11px 11px 9px;
+    color: #878787;
+}
+
+img {vertical-align: bottom;}
+
+li img {
+    width: 50%;
+    display: none;
+}
+
+.pitchers {
+    border-top: 1px solid #ccc;
+    margin: 12px -15px -2px;
+    padding: 14px 16px 0px;
+    font-size: 12px;
+}
+
+.team_record {
+    display: block;
+    color: #a5a6a7;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: capitalize;
+    margin-top: 2px;
+}
+
+.team_grp {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team_grp .record_grp {
+    flex: 1;
+    font-size: 20px;
+}
+.record_grp a {
+    text-decoration: none;
+    color: #48494a;
+}
+.record_grp a:hover {
+    text-decoration: underline;
+    color: #06c;
+}
+
+.away_Score,
+.home_Score {
+    width: 25px;
+    margin-top: 5px;
+}
+
+li > div .team_grp:nth-child(2) {
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0px 30px 16px 0px;
+    line-height: 35px;
+
+}
+
+.ad300x250 {
+    background: url('../images/incontent-bonobos-300.jpg') no-repeat 0 0;
+    width: 300px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.hide {display: none;}
+.show {display: block;}
+
+.pushdownButton { position: absolute; top: 0; right: 0; } 
+.pushdownContainer { position: relative; text-align: right; } 
+.pushdownContainer img { border: 0; outline: none; } 
+#espnAdsPencil { height: 100px; overflow: hidden;} 
+#espnAdsExtend { height: auto; } 
+#espnAdsIntro {  height: 418px; } 
+
+#espnAdsPencil,
+#espnAdsExtend {
+    transition: all 0.5s ease;
+}
+
+.show,.hide {
+    transition: all 2s;
+}
+
+/* espn external asset styles */
+a.sprite {position:absolute;top:0px;right:0px;background: url(https://secure.espncdn.com/advertising/i/ui/buttonSprite_35.png) no-repeat; background-size: 400%; width:35px; height:35px; display:block;}a.collapse {background-position: 0px -70px;} a.collapse:hover {background-position: -35px -70px;} a.expand  {background-position: 0 -35px;} a.expand:hover  {background-position: -35px -35px;} a.close  {background-position: 0px 0px;} a.close:hover  {background-position: -35px 0px;} a.collapse.light {background-position: -70px -70px;} a.collapse.light:hover {background-position: -105px -70px;} a.expand.light  {background-position: -70px -35px;} a.expand.light:hover  {background-position: -105px -35px;} a.close.light  {background-position: -70px 0px;} a.close.light:hover  {background-position: -105px 0px;}
+
+
+/* mobile/table breakpoints */
+@media (max-width : 860px) {
+    ul {
+        display: block;
+    }
+    li {width: 100%;}
+}
+
+
+@media (max-width : 700px) {
+    .sidebar {
+        display: none;
+    }
+    li {
+        padding: 0 0px 20px 0;
+    }
+}
+
+
+@media (max-width : 622px) {
+    #espnAdsPencil {
+        height: 10em;
+    }
+    #espnAdsExtend {
+        height: auto;
+    }
+}
+
+@media (max-width : 575px) {
+    #espnAdsPencil,#espnAdsExtend{
+        height: auto;
+    }
+}
