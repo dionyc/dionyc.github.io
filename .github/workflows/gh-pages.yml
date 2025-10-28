@@ -36,6 +36,9 @@ jobs:
         working-directory: astro
         run: npm run build
 
+      - name: Disable Jekyll processing
+        run: touch astro/dist/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -51,4 +54,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
